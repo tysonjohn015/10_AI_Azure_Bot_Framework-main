@@ -23,4 +23,5 @@ class DefaultConfig:
 
     ############## App Insights Service ###############
     APPINSIGHTS_INSTRUMENTATION_KEY = os.environ.get(
-        "AppInsightsInstrumentationKey", "01f3ccc8-3d16-4998-9291-d2c773383390")
+        "AppInsightsInstrumentationKey", "a19f3cda-7f37-4f23-b477-3957a640e706")
+    # AppInsight API Key: leidc4yesmvlrjy8u3n0b78l6s0s2z1e4cnnxrb1
