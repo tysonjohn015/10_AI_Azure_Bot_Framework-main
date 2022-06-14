@@ -1,0 +1,60 @@
+{"luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "BookFlight",
+      "features": []
+    },
+    {
+      "name": "None",
+      "features": []
+    }
+  ],
+  "entities": [
+    {
+      "name": "budget",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "dst_city",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "end_date",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "or_city",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "str_date",
+      "children": [],
+      "roles": [],
+      "features": []
+    }
+  ],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [],
+  "prebuiltEntities": [],
+  "versionId": "0.1",
+  "name": "flymeluis_app",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [],
+  "regex_features": [],
+  "patterns": [],
+  "settings": [],
+"utterances": [{"text": "i am a world-renowned pastry chef and i need to travel to st. petersburg - stat!", "intent": "BookFlight", "entities": [{"entity": "dst_city", "startPos": 58, "endPos": 72}]}, {"text": "im in tijuana find me a flight to curitiba aug 27 to sept 4", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 6, "endPos": 13}, {"entity": "dst_city", "startPos": 34, "endPos": 42}, {"entity": "str_date", "startPos": 43, "endPos": 49}, {"entity": "end_date", "startPos": 53, "endPos": 58}]}, {"text": "hi im from punta cana looking to go on a trip", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 11, "endPos": 21}]}, {"text": "where can this guy go for 2400??? i live in mexico city. been dreaming of a trip to milan", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 44, "endPos": 55}, {"entity": "dst_city", "startPos": 84, "endPos": 88}, {"entity": "budget", "startPos": 26, "endPos": 30}]}, {"text": "are there 5 star hotels in kyoto?", "intent": "BookFlight", "entities": [{"entity": "dst_city", "startPos": 27, "endPos": 32}]}, {"text": "hello there i am looking for a travel package departing from tofino on or after august 29. i would like to go to calgary with a party of fourteen adults.", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 61, "endPos": 67}, {"entity": "dst_city", "startPos": 113, "endPos": 120}, {"entity": "str_date", "startPos": 80, "endPos": 89}]}, {"text": "hi there! i'm about to jet out to my first ever internship\ni need to make sure i get this booking exactly right\ncan you get me to rome?", "intent": "BookFlight", "entities": [{"entity": "dst_city", "startPos": 130, "endPos": 134}]}, {"text": "hi, i'm looking for a vacation package to chicago from brasilia.", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 55, "endPos": 63}, {"entity": "dst_city", "startPos": 42, "endPos": 49}]}, {"text": "yes im looking for mewtwo in marseille ook? leaving from fortaleza\nwith 2200 sept 11th", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 57, "endPos": 66}, {"entity": "dst_city", "startPos": 29, "endPos": 38}, {"entity": "str_date", "startPos": 77, "endPos": 85}, {"entity": "budget", "startPos": 72, "endPos": 76}]}, {"text": "please get me all the way to chicago", "intent": "BookFlight", "entities": [{"entity": "dst_city", "startPos": 29, "endPos": 35}]}, {"text": "i have a total of $4200 to go to kingston from seoul. what can you do for me?", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 47, "endPos": 52}, {"entity": "dst_city", "startPos": 33, "endPos": 41}, {"entity": "budget", "startPos": 18, "endPos": 23}]}, {"text": "please find me a package for 22 adults from kabul to tofino", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 44, "endPos": 49}, {"entity": "dst_city", "startPos": 53, "endPos": 58}]}, {"text": "get me to atlanta!", "intent": "BookFlight", "entities": [{"entity": "dst_city", "startPos": 10, "endPos": 17}]}, {"text": "i wanna go on a vacation with my wife and 4 kids. our budget is 3300 and we want to travel between september 6th and 21st. we were looking at going to denver from dallas.", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 163, "endPos": 169}, {"entity": "dst_city", "startPos": 151, "endPos": 157}, {"entity": "str_date", "startPos": 99, "endPos": 112}, {"entity": "end_date", "startPos": 117, "endPos": 121}, {"entity": "budget", "startPos": 64, "endPos": 68}]}, {"text": "hi i live in kakariko village and i want to go away! where could i go?", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 13, "endPos": 29}]}, {"text": "my secretary is on vacation so i have to book my own flights today. definitely feels strange\nplease book: san diego to rome", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 106, "endPos": 115}, {"entity": "dst_city", "startPos": 119, "endPos": 122}]}, {"text": "i need to go to beijing from atlanta", "intent": "BookFlight", "entities": [{"entity": "or_city", "startPos": 29, "endPos": 35}, {"entity": "dst_city", "startPos": 16, "endPos": 23}]}]
+}
