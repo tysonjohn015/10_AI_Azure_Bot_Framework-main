@@ -15,7 +15,7 @@ def test_luis_intent():
         CognitiveServicesCredentials(CONFIG.LUIS_API_KEY))
     
     # Create request
-    request ='book a flight from Tunis to Toronto between 22 October 2021 to 5 November 2021, for a budget of $3500'
+    request ='book a flight from cok to cdg from 01/01/2021 to 02/02/2021 for a budget of 3500 euros'
 
     # Get response
     response = clientRuntime.prediction.resolve(CONFIG.LUIS_APP_ID, query=request)
@@ -34,12 +34,12 @@ def test_luis_origin():
         CognitiveServicesCredentials(CONFIG.LUIS_API_KEY))
     
     # Create request
-    request ='book a flight from Tunis to Toronto between 22 October 2021 to 5 November 2021, for a budget of $3500'
+    request ='book a flight from cok to cdg from 01/01/2021 to 02/02/2021 for a budget of 3500 euros'
 
     # Get response
     response = clientRuntime.prediction.resolve(CONFIG.LUIS_APP_ID, query=request)
     
-    check_origin = 'tunis'
+    check_origin = 'cok'
     all_entities = response.entities
     
     for i in range(0, len(all_entities)):
@@ -58,12 +58,12 @@ def test_luis_destination():
         CognitiveServicesCredentials(CONFIG.LUIS_API_KEY))
     
     # Create request
-    request ='book a flight from Tunis to Toronto between 22 October 2021 to 5 November 2021, for a budget of $3500'
+    request ='book a flight from cok to cdg from 01/01/2021 to 02/02/2021 for a budget of 3500 euros'
 
     # Get response
     response = clientRuntime.prediction.resolve(CONFIG.LUIS_APP_ID, query=request)
     
-    check_destination = 'toronto'
+    check_destination = 'cdg'
     all_entities = response.entities
     
     for i in range(0, len(all_entities)):
@@ -71,3 +71,27 @@ def test_luis_destination():
             is_destination = all_entities[i].entity
     
     assert check_destination == is_destination
+
+
+def test_luis_budget():
+    """Check LUIS non-regression on *Destination*
+    """
+    # Instantiate prediction client
+    clientRuntime = LUISRuntimeClient(
+        CONFIG.LUIS_API_HOST_NAME,
+        CognitiveServicesCredentials(CONFIG.LUIS_API_KEY))
+    
+    # Create request
+    request ='book a flight from cok to cdg from 01/01/2021 to 02/02/2021 for a budget of 3500 euros'
+
+    # Get response
+    response = clientRuntime.prediction.resolve(CONFIG.LUIS_APP_ID, query=request)
+    
+    check_budget = '3500 euros'
+    all_entities = response.entities
+    
+    for i in range(0, len(all_entities)):
+        if all_entities[i].type == 'budget':
+            is_budget = all_entities[i].entity
+    
+    assert check_budget == is_budget
