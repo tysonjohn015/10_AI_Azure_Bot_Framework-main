@@ -1,7 +1,7 @@
 # :dart: A chatbot to book flights
 The goal of this project is to prototype a 1st version of FlyMe chatbot, which will help customers to book a vacation package.
 
-The MVP (*Minimum Viable Product*) should help us to identify the "BookFlight" intent and return the 5 main entities which constitutes flight' details:
+The MVP (*Minimum Viable Product*) should help us to identify the "BookFlight" intent and return the 5 main entities which constitutes flight's details:
 - origin city;
 - destination city;
 - departure date;
